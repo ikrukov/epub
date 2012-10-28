@@ -1,0 +1,33 @@
+#!/bin/bash
+
+function usage()
+{
+	echo "Usage: " $0 path_to_epub_dir out_file
+}
+
+SRC_DIR=$1
+OUT_FILE=$2
+
+if [  $# -ne 2 ]; then
+	echo "Wrong number of arguments!"
+	usage
+	exit 1
+fi
+
+if [ ! -d $SRC_DIR ]; then
+	echo "There is no directory" $SRC_DIR
+	usage
+	exit 1
+fi
+
+pushd $SRC_DIR
+
+echo "application/epub+zip" > mimetype && \
+zip -0Xq $OUT_FILE mimetype && \
+zip -Xr9D $OUT_FILE META-INF OEBPS
+
+popd
+
+mv $SRC_DIR/$OUT_FILE $OUT_FILE
+
+
