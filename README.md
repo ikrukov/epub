@@ -19,15 +19,15 @@ to unpacked epub
 
  	xsltproc /path/to/your/docbook-xsl/epub/docbook.xsl file.docbook
 
- * create mimetype file
+* create mimetype file
 
  	echo "application/epub+zip" > mimetype
 
- * pack mimefile to epub (mimetype *MUST* be first file in archive and it *MUST NOT* be compressed!):
+* pack mimefile to epub (mimetype *MUST* be first file in archive and it *MUST NOT* be compressed!):
 
  	zip -0Xq  my-book.epub mimetype
 
- * pack the rest of content to the same file:
+* pack the rest of content to the same file:
 
  	zip -Xr9D my-book.epub META-INF OEBPS
 
