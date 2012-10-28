@@ -1,8 +1,9 @@
 What is this?
 =============
 
-This is collection of free books in epub format, which I wanted to have on my reader,
-but can't find in appropriate format. Most of them converted from GNU texinfo.
+This is collection of free books in epub format, which I wanted
+to have on my reader, but can't find in appropriate format.
+Most of them converted from GNU texinfo.
 
 How to convert book from texinfo to epub?
 ===========================================
@@ -14,7 +15,7 @@ In short, to convert texinfo to epub you shold do the following:
 
 	makeinfo --docbook /path/to/your/file.texi -o file.docbook
 
-* using any XSLT-processor and docbook.xsl for epub convert docbook to
+* using any XSLT-processor and docbook.xsl for epub convert docbook
 to unpacked epub
 
  	xsltproc /path/to/your/docbook-xsl/epub/docbook.xsl file.docbook
