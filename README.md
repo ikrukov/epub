@@ -1,4 +1,4 @@
-Waht is this?
+What is this?
 =============
 
 This is collection of free books in epub format, which I wanted to have on my reader,
