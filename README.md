@@ -19,7 +19,9 @@ In short, to convert texinfo to epub you shold do the following:
 to unpacked epub
 
  	xsltproc /path/to/your/docbook-xsl/epub/docbook.xsl file.docbook
+
 	or 
+
 	xsltproc http://docbook.sourceforge.net/release/xsl/current/epub/docbook.xsl file.docbook
 
 * create mimetype file
